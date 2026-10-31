@@ -1,0 +1,261 @@
+# Google AI Studio Tools
+
+This document explains the major tools available in Google AI Studio along with practical examples.
+
+---
+
+# 1. System Instructions
+
+System Instructions define how Gemini should behave throughout a conversation.
+
+## Example
+
+```text
+You are a Python mentor.
+Always explain concepts with examples.
+```
+
+## Output
+
+Gemini consistently behaves as a Python mentor.
+
+## Use Cases
+
+- Tutors
+- Interviewers
+- Technical Assistants
+- Customer Support Bots
+
+---
+
+# 2. Thinking Level
+
+Controls the depth of reasoning.
+
+Options:
+
+- Low
+- Medium
+- High
+
+## Example
+
+```text
+Explain recursion.
+```
+
+Higher thinking provides deeper reasoning and analysis.
+
+---
+
+# 3. Structured Outputs
+
+Generates responses in predefined formats such as JSON.
+
+## Example Schema
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    }
+  }
+}
+```
+
+## Prompt
+
+```text
+Generate an AI Engineer profile.
+```
+
+## Output
+
+```json
+{
+  "name": "John Doe",
+  "role": "AI Engineer"
+}
+```
+
+## Uses
+
+- APIs
+- Databases
+- AI Applications
+
+---
+
+# 4. Code Execution
+
+Allows Gemini to generate and execute Python code.
+
+## Prompt
+
+```text
+Calculate the average of numbers from 1 to 100.
+```
+
+Gemini generates Python code and executes it to provide accurate results.
+
+## Uses
+
+- Data Analysis
+- Simulations
+- Statistics
+- Charts
+
+---
+
+# 5. Function Calling
+
+Allows Gemini to interact with external tools and APIs.
+
+## Example Function
+
+```json
+{
+  "name": "get_weather"
+}
+```
+
+## User Prompt
+
+```text
+What's the weather in Bangalore?
+```
+
+## Function Call
+
+```json
+{
+  "functionCall": {
+    "name": "get_weather",
+    "args": {
+      "city": "Bangalore"
+    }
+  }
+}
+```
+
+## Uses
+
+- Weather Apps
+- Payment Systems
+- Booking Systems
+- AI Agents
+
+---
+
+# 6. URL Context
+
+Allows Gemini to understand content from websites.
+
+## Example
+
+URL:
+
+```text
+https://docs.streamlit.io
+```
+
+Prompt:
+
+```text
+Summarize this documentation.
+```
+
+Gemini analyzes the website and provides a summary.
+
+## Uses
+
+- Research
+- Documentation Analysis
+- Learning Resources
+
+---
+
+# 7. Google Search Grounding
+
+Provides access to current web information.
+
+## Example
+
+```text
+Latest AI news.
+```
+
+Gemini uses Google Search to retrieve relevant information.
+
+## Uses
+
+- Current Events
+- Trends
+- Research
+
+---
+
+# 8. Maps Grounding
+
+Uses Google Maps information.
+
+## Example
+
+```text
+Best coffee shops near Koramangala.
+```
+
+Gemini retrieves relevant location-based results.
+
+## Uses
+
+- Travel Planning
+- Restaurant Recommendations
+- Location Discovery
+
+---
+
+# 9. Media Resolution
+
+Controls the detail level used while processing images.
+
+Levels:
+
+- Low
+- Medium
+- High
+
+## Example
+
+Upload a receipt image.
+
+Prompt:
+
+```text
+Extract all text.
+```
+
+Higher resolutions provide better text extraction and analysis.
+
+---
+
+# Summary
+
+| Tool | Purpose |
+|--------|----------|
+| System Instructions | Define behavior |
+| Thinking Level | Control reasoning depth |
+| Structured Outputs | Generate JSON responses |
+| Code Execution | Execute Python code |
+| Function Calling | Connect with APIs |
+| URL Context | Read website content |
+| Search Grounding | Access current information |
+| Maps Grounding | Use map-based context |
+| Media Resolution | Improve image analysis |
+
+These tools collectively transform Google AI Studio into a powerful platform for learning, experimenting, and building AI-powered applications.
